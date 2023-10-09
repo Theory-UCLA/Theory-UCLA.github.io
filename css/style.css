@@ -21,6 +21,10 @@ h5 {
 body {
     background-color: #f4f6f9;
     margin: 0;
+    /* background: linear-gradient(120deg, #f3f4f6, #e7eaed); */
+    /* background-image: url(/Theory-UCLA.github.io/ucla-logo.png);
+    background-attachment: fixed;
+    background-size: cover; */
 }
 
 a {
@@ -74,11 +78,12 @@ a:hover {
 /* Card Enhancements */
 .card {
     border: none;  /* Remove the default border */
-    border-radius: 10px;  /* Rounded corners */
     overflow: hidden;  /* To make sure child elements adhere to rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);  /* Subtle shadow */
     transition: box-shadow 0.3s ease;  /* Transition for hover effect */
     background-color: rgba(0, 145, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px #d1d1d1, -10px -10px 20px #ffffff;
+    
 }
 
 .card:hover {
@@ -102,6 +107,10 @@ a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Adds a subtle shadow for depth */
     background-color: #003366; /* More defined blue */
     border-radius: 0 0 0 0; 
+    position: sticky;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;  /* Ensure the navbar stays on top of other content */
 }
 
 .navbar-toggler {
