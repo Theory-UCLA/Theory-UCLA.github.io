@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Theory at UCLA</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      html {
+        font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+          segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
+          arial, sans-serif;
+      }
+    </style>
+    <script src="./index.js" type="module"></script>
+  </head>
+
+  <body>
+    <theory-ucla-layout>
+      <!-- Main Content -->
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-sm">
+            <h1>Fall 2023 — Theorist's Toolkit</h1>
+            <div class="card mb-3">
+              <div class="card-body">
+                <p class="card-text mb-0">
+                  <strong>Location:</strong> Delta Terrace, Sunset Village
+                </p>
+                <p class="card-text mb-0">
+                  <strong>Time:</strong> Tuesday 6:30pm - 7:30pm
+                </p>
+                <!-- <p class="card-text mb-0"><strong>Files:</strong> <a>scribe note template</a></p>  -->
+              </div>
+            </div>
+
+            <h3>About</h3>
+            <p>
+              A lot of advances in theoretical computer sciences stem from
+              techniques that belong to a common toolbox. Our hope is to equip
+              you, a theorist, with this toolbox. We start by introducing
+              fundamental mathematical concepts such as linear algebra, graph
+              theory, probability theory, information theory, and more. We will
+              also demonstrate their applicability towards solving a variety of
+              combinatorial problems. The examples we'll discuss will be concise
+              but rigorous and might show unexpected links between different
+              problems.
+            </p>
+
+            <h3>Topics</h3>
+            <ul>
+              <li>Dimension arguments and linear algebra methods</li>
+              <li>Random walks and spectral graph theory</li>
+              <li>Information theory</li>
+              <li>The Probabilistic Method</li>
+              <li>Quantum computing</li>
+            </ul>
+
+            <h3>Resources</h3>
+            <ul>
+              <li>
+                UC Berkeley's reading group
+                <a
+                  href="https://ugtcs.berkeley.edu/reading-groups/sp19/toolkit/"
+                  >Spring 2019 - A Theorist's Toolkit</a
+                >
+              </li>
+              <li>
+                Ryan O’Donnell
+                <a href="http://www.cs.cmu.edu/~odonnell/toolkit13/"
+                  >A Theorist’s Toolkit 2013</a
+                >
+              </li>
+              <li>
+                Sanjeev Arora’s offering of a similar course for
+                <a
+                  href="http://www.cs.princeton.edu/courses/archive/fall02/cs597D/"
+                  >2002</a
+                >
+                and
+                <a
+                  href="https://www.cs.princeton.edu/courses/archive/fall07/cos597D/Site/coursepage.html"
+                  >2007</a
+                >
+                and related
+                <a href="http://www.cs.princeton.edu/~arora/pubs/toolkit.pdf"
+                  >notes</a
+                >
+              </li>
+            </ul>
+
+            <!-- Topics Table -->
+            <table class="table">
+              <thead>
+                <tr class="row">
+                  <th class="col-sm-2">Date</th>
+                  <th class="col-sm-7">Topic</th>
+                  <th class="col-sm-3">Resources</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="row">
+                  <td class="col-sm-2">10/10/2023</td>
+                  <td class="col-sm-7">
+                    <p>
+                      Preliminary logistics meeting — 6:30pm @ Delta Terrace
+                    </p>
+                    <ul>
+                      <li>
+                        Discuss plans for weekly meetings and quarter long
+                        goals.
+                      </li>
+                      <li>
+                        Introduce Lagrange interpolation and Shamir Secret
+                        Sharing.
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="col-sm-3"></td>
+                </tr>
+
+                <tr class="row">
+                  <td class="col-sm-2">10/17/2023</td>
+                  <td class="col-sm-7">
+                    <p>Linear Algebra and Codes — 6:30 pm @ Delta Terrace</p>
+                    <ul>
+                      <li>Rigorously prove ideas introduced last time.</li>
+                      <li>
+                        Brief introduction to finite fields, random matrices.
+                      </li>
+                      <li>Introduction to Hamming codes</li>
+                    </ul>
+                  </td>
+                  <td class="col-sm-3">
+                    <a href="notes/theory2.pdf">notes</a>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="col-sm-2">10/24/2023</td>
+                  <td class="col-sm-7">
+                    <p>Linear Algebra and Codes II — 6:30 pm @ Delta Terrace</p>
+                    <ul>
+                      <li>Linear codes and their properties</li>
+                      <li>
+                        Generator and parity check matrices for Hamming codes
+                      </li>
+                      <li>Generalized Hamming codes and bounds</li>
+                    </ul>
+                  </td>
+                  <td class="col-sm-3">
+                    <a href="notes/theory3.pdf">notes</a>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="col-sm-2">11/9/2023</td>
+                  <td class="col-sm-7">
+                    <p>Zero Knowledge Proofs - 6:30pm @ Delta Terrace</p>
+                    <ul>
+                      <li>Intro to complexity classes and proof-systems</li>
+                      <li>
+                        Defined completeness, soundness and zero-knowledge
+                      </li>
+                      <li>Graph Isomorphism example</li>
+                    </ul>
+                  </td>
+                  <td class="col-sm-3">
+                    <a href="notes/theory4.pdf">photos</a>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="col-sm-2">11/16/2023</td>
+                  <td class="col-sm-7">
+                    <p>Zero Knowledge Proofs II - 6:30pm @ Delta Terrace</p>
+                    <ul>
+                      <li>Introducing simulators</li>
+                      <li>
+                        Proving zero-knowledge for Graph Isomorphism proof
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="col-sm-3">
+                    <a href="notes/theory5.pdf">photos</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </theory-ucla-layout>
+  </body>
+</html>

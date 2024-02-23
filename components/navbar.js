@@ -2,49 +2,103 @@ import {
   LitElement,
   css,
   html,
+  unsafeCSS,
 } from "https://cdn.jsdelivr.net/npm/lit@3.1.2/+esm";
-import styles from "../css/style.css" assert { type: "css" };
-
-console.log({ styles });
+import { THEME_COLOR } from "./constants.js";
 
 export class Navbar extends LitElement {
-  static styles = styles;
+  static styles = css`
+    nav {
+      color: white;
+      background-color: ${unsafeCSS(THEME_COLOR)};
+    }
+
+    #navbar-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 75%;
+      margin: 0 auto;
+      padding: 0.5rem 0;
+    }
+
+    #navbar-links {
+      display: flex;
+      align-items: center;
+    }
+
+    #navbar-links > a {
+      transition: all 0.3s;
+    }
+
+    #navbar-links > a:hover {
+      opacity: 0.5;
+    }
+
+    #navbar-links > a:not(#brand) {
+      margin-right: 1.5rem;
+    }
+
+    #brand {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 2rem;
+    }
+
+    #brand svg {
+      height: 2rem;
+      margin-right: 0.75rem;
+    }
+
+    #brand h1 {
+      margin: 0;
+    }
+  `;
 
   render() {
     return html`
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand font-weight-bold" href="/">
-            <!-- <img src="ucla-logo.png" height="30" alt="Theory@UCLA"> -->
-            Theory@UCLA
-          </a>
-
-          <!-- Button moved outside the collapsible content -->
-          <a class="btn btn-primary" href="https://forms.gle/Ys2NrAjJ9iW4XyZK8"
-            >Join us!</a
-          >
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-              <!-- Your navbar items go here -->
-            </ul>
+      <nav>
+        <div id="navbar-content">
+          <div id="navbar-links">
+            <a id="brand" href="/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-layers-3"
+              >
+                <path
+                  d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"
+                />
+                <path
+                  d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"
+                />
+                <path
+                  d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"
+                />
+              </svg>
+              <h3>Theory@UCLA</h3>
+            </a>
+            <a>Reading Groups</a>
+            <a>Review Sessions</a>
+            <a>People</a>
+            <a>Socials</a>
           </div>
+          <theory-ucla-link-button
+            href="https://discord.gg/KJzWu7Zz"
+            target="_blank"
+          >
+            Join Us
+          </theory-ucla-link-button>
         </div>
       </nav>
     `;
   }
 }
-
-customElements.define("theory-ucla-navbar", Navbar);
