@@ -4,13 +4,18 @@ import {
   html,
   unsafeCSS,
 } from "https://cdn.jsdelivr.net/npm/lit@3.1.2/+esm";
-import { THEME_COLOR } from "./constants.js";
+import { THEME_COLOR_HEX } from "./constants.js";
 
 export class Navbar extends LitElement {
   static styles = css`
     nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
       color: white;
-      background-color: ${unsafeCSS(THEME_COLOR)};
+      /* background-color: #000e0; */
+      /* backdrop-filter: blur(8px); */
     }
 
     #navbar-content {
@@ -25,6 +30,7 @@ export class Navbar extends LitElement {
     #navbar-links {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     #navbar-links > a {
@@ -46,6 +52,7 @@ export class Navbar extends LitElement {
       font-weight: bold;
       text-decoration: none;
       margin-right: 2rem;
+      font-family: "Roboto Slab";
     }
 
     #brand svg {

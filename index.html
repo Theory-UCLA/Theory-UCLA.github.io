@@ -4,27 +4,46 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Theory at UCLA</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <style>
-      body {
-        min-height: 100vh;
-        font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
-          segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
-          arial, sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" href="./index.css" />
     <script src="./index.js" type="module"></script>
   </head>
 
   <body>
     <theory-ucla-layout>
-      <h1>UCLA's undergraduate CS Theory community</h1>
+      <div
+        slot="hero"
+        style="
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          align-items: center;
+          height: 100%;
+          padding: 4rem;
+          padding-top: 8rem;
+          background: linear-gradient(#000a, #000a), url('./images/ucla.jpeg');
+          background-size: cover;
+          color: white;
+        "
+      >
+        <h1
+          style="
+            text-align: center;
+            max-width: 50%;
+            margin: 0 auto;
+            margin-bottom: 5rem;
+            font-size: 3rem;
+          "
+        >
+          The first theoretical computer science community at UCLA
+        </h1>
+        <theory-ucla-link-button
+          href="https://discord.gg/KJzWu7Zz"
+          target="_blank"
+          size="lg"
+        >
+          Join Us
+        </theory-ucla-link-button>
+      </div>
     </theory-ucla-layout>
   </body>
 </html>

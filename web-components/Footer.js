@@ -4,13 +4,14 @@ import {
   html,
   unsafeCSS,
 } from "https://cdn.jsdelivr.net/npm/lit@3.1.2/+esm";
-import { THEME_COLOR } from "./constants.js";
+import { THEME_COLOR_HEX } from "./constants.js";
 
 export class Footer extends LitElement {
   static styles = css`
     footer {
-      color: white;
-      background-color: ${unsafeCSS(THEME_COLOR)};
+      color: black;
+      background-color: #000d;
+      backdrop-filter: blur(8px);
       padding: 0.5rem 0;
     }
 

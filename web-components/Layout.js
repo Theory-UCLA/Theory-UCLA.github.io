@@ -6,8 +6,14 @@ import {
 
 export class Layout extends LitElement {
   static styles = css`
+    :host {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
     main {
-      height: 100%;
+      flex: 1;
       padding: 2rem;
       max-width: 75%;
       margin: 0 auto;
@@ -17,6 +23,7 @@ export class Layout extends LitElement {
   render() {
     return html`
       <theory-ucla-navbar></theory-ucla-navbar>
+      <slot name="hero"></slot>
       <main>
         <slot></slot>
       </main>
