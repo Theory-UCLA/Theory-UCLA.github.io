@@ -4,12 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Theory at UCLA</title>
-    <link rel="stylesheet" href="./index.css" />
-    <script src="./index.js" type="module"></script>
+    <link rel="stylesheet" href="/index.css" />
+    <script src="/index.js" type="module"></script>
+    <style>
+      #hero-heading {
+        font-size: 2.5rem;
+        padding-top: 9rem;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      @media (min-width: 960px) {
+        #hero-heading {
+          font-size: 3rem;
+          padding-top: 6rem;
+          max-width: 50%;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <theory-ucla-layout>
+    <theory-ucla-layout ishomepage="true">
       <div
         slot="hero"
         style="
@@ -18,22 +34,13 @@
           flex-direction: column;
           align-items: center;
           height: 100%;
-          padding: 4rem;
-          padding-top: 8rem;
+          padding: 6rem 2rem;
           background: linear-gradient(#000a, #000a), url('./images/ucla.jpeg');
           background-size: cover;
           color: white;
         "
       >
-        <h1
-          style="
-            text-align: center;
-            max-width: 50%;
-            margin: 0 auto;
-            margin-bottom: 5rem;
-            font-size: 3rem;
-          "
-        >
+        <h1 id="hero-heading" style="text-align: center; margin-bottom: 5rem">
           The first theoretical computer science community at UCLA
         </h1>
         <theory-ucla-link-button
@@ -43,6 +50,15 @@
         >
           Join Us
         </theory-ucla-link-button>
+      </div>
+      <div>
+        <h2>About Us</h2>
+        <p>
+          We're the first theoretical computer science community at UCLA. We're
+          planning to organize reading groups, workshops, socials and foster a
+          community for people that are interested in the field of theoretical
+          computer science.
+        </p>
       </div>
     </theory-ucla-layout>
   </body>

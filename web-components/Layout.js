@@ -5,6 +5,12 @@ import {
 } from "https://cdn.jsdelivr.net/npm/lit@3.1.2/+esm";
 
 export class Layout extends LitElement {
+  static properties = {
+    isHomePage: {
+      type: Boolean,
+    },
+  };
+
   static styles = css`
     :host {
       display: flex;
@@ -15,14 +21,15 @@ export class Layout extends LitElement {
     main {
       flex: 1;
       padding: 2rem;
-      max-width: 75%;
+      width: 75%;
       margin: 0 auto;
     }
   `;
 
   render() {
     return html`
-      <theory-ucla-navbar></theory-ucla-navbar>
+      <theory-ucla-navbar ?ishomepage="${this.isHomePage}">
+      </theory-ucla-navbar>
       <slot name="hero"></slot>
       <main>
         <slot></slot>
