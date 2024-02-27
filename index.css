@@ -1,0 +1,17 @@
+@import url("https://unpkg.com/normalize.css@8.0.1/normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+    sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab";
+}
