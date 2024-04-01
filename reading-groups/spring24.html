@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Theory at UCLA</title>
+    <link rel="stylesheet" href="/index.css" />
+    <script src="/index.js" type="module"></script>
+    <style>
+      td {
+        padding: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <theory-ucla-layout>
+      <div>
+        <div>
+          <div>
+            <h1>Spring 2024 — Secure Multiparty Computation</h1>
+            <div>
+              <div>
+                <p><strong>Location:</strong> Mathematical Sciences 3915H</p>
+                <p><strong>Time:</strong> Tuesday 7pm - 8pm</p>
+                <!-- <p><strong>Files:</strong> <a>scribe note template</a></p>  -->
+              </div>
+            </div>
+
+            <h3>About</h3>
+            <p>
+                Protocols for secure multiparty computation (MPC) allow a set of parties to compute a joint function of their 
+                private inputs while revealing nothing but the output. The potential applications for MPC are huge: privacy-preserving auctions, 
+                private DNA comparisons, private machine learning, threshold cryptography, and more. Recently, MPC has become efficient enough to 
+                be used in practice, and has made the transition from theory to industry.
+            </p>
+
+            <h3>Topics</h3>
+            <ul>
+              <!-- <li>Definitions of perfect, statistical and computational zero-knowledge</li>
+              <li>Soundness Amplification</li>
+              <li>Constant-Round Zero-Knowledge</li>
+              <li>Non-Interactive Zero-Knowledge</li> -->
+            </ul>
+
+            <h3>Resources</h3>
+            <ul>
+              <!-- <li>
+                Alex Lombardi's MIT course on
+                <a
+                  href="https://sites.google.com/view/alex-lombardi/home/6-876-fall-2019-mit?authuser=0"
+                  >Cryptographic Proofs Fall 2019</a
+                >
+              </li>
+              <li>
+                Section 5 of Yehuda Lindell's tutorial on simulation proofs
+                <a href="https://eprint.iacr.org/2016/046"
+                  >How To Simulate It</a
+                >
+              </li>
+              <li>
+                Jonathan Katz's course on
+                <a href="https://www.cs.umd.edu/~jkatz/gradcrypto2/"
+                  >Advanced Topics in Cryptography</a
+                >
+              </li>
+              <li>
+                Chapter 4 of Oded Goldreich's textbook on
+                <a href="https://www.wisdom.weizmann.ac.il/~oded/foc-vol1.html"
+                  >Foundations of Cryptography - Volume 1</a
+                >
+              </li> -->
+            </ul>
+
+            <!-- Topics Table -->
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Topic</th>
+                  <th>Resources</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4/2/2024</td>
+                  <td>
+                    <p>
+                      Preliminary logistics meeting — 7pm @ MS 3915H
+                    </p>
+                    <ul>
+                      <li>
+                        Discuss plans for weekly meetings and quarter long
+                        goals.
+                      </li>
+                      <li>
+                        Decide primary resource for the reading group.
+                      </li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+
+                <!-- <tr>
+                  <td>1/25/2024</td>
+                  <td>
+                    <p>Definition of ZK — 6:30 pm @ MS 3915D</p>
+                    <ul>
+                      <li>Honest-verifier zero-knowledge for quadratic non-residuosity.</li>
+                      <li>
+                        ZK implies witness hiding.
+                      </li>
+                      <li>ZK for NP.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <a href="notes/theory2.pdf">notes</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2/1/2024</td>
+                  <td>
+                    <p>ZK for Graph Isomorphism — 6:30 pm @ MS 3915D</p>
+                    <ul>
+                      <li>Computational zero-knowledge for GI.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <a href="notes/theory3.pdf">notes</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2/8/2024</td>
+                  <td>
+                    <p>More ZK protocols - 6:30pm @ MS 3915D</p>
+                    <ul>
+                      <li>ZK for 3-colorability.</li>
+                      <li>ZK for Graph Hamiltonicity.</li>
+                      
+                    </ul>
+                  </td>
+                  <td>
+                    <a href="notes/theory4.pdf">photos</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2/15/2024</td>
+                  <td>
+                    <p>Soundness Amplification for ZK - 6:30pm @ MS 3915D</p>
+                    <ul>
+                      <li>Parallel and sequential repetition for soundness amplification.</li>
+                      <li>Examples and counter-examples of protocols for which preserve ZK under repetition.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <a href="notes/theory5.pdf">photos</a>
+                  </td>
+                </tr>
+
+                <tr>
+                    <td>2/22/2024</td>
+                    <td>
+                      <p>Constant-Round ZK - 6:30pm @ MS 3915D</p>
+                      <ul>
+                        <li>Hiding and binding commitment-schemes.</li>
+                        <li>Using commitments to construct polytime simulators to prove ZK.</li>
+                        <li>Goldreich-Kahan Proof System from Lindell's survey.</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <a href="notes/theory5.pdf">photos</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>3/14/2024</td>
+                    <td>
+                      <p>Non-Interactive ZK - 6:30pm @ MS 3915D</p>
+                      <ul>
+                        <li>NIZK for Graph Hamiltonicity in the CRS model.</li>
+                        <li>Reducing to the Hidden-Bits model.</li>
+                        <li>Using NIZK to upgrade from semantic to CCA-1 and CCA-2 security.</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <a href="notes/theory5.pdf">photos</a>
+                    </td>
+                  </tr> -->
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </theory-ucla-layout>
+  </body>
+</html>
