@@ -148,7 +148,7 @@ export class Navbar extends LitElement {
             <a href="/socials.html">Socials</a>
             <theory-ucla-link-button
               id="mobile-button"
-              href="https://discord.gg/PEAXRyhS"
+              href="https://discord.gg/rPnmYRT2ZH"
               target="_blank"
             >
               Join Us
@@ -156,7 +156,7 @@ export class Navbar extends LitElement {
           </div>
           <theory-ucla-link-button
             id="desktop-button"
-            href="https://discord.gg/PEAXRyhS"
+            href="https://discord.gg/rPnmYRT2ZH"
             target="_blank"
           >
             Join Us
